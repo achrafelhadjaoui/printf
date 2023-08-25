@@ -16,7 +16,7 @@ int _string(va_list arg)
 	ptr = va_arg(arg, char *);
 	while (ptr[i] != '\0')
 	{
-		write(1, &ptr[i], 1);
+		write(STDOUT_FILENO, &ptr[i], 1);
 		i++;
 	}
 	return (i);
@@ -36,7 +36,7 @@ int _char(va_list arg)
 
 	i = 0;
 	c = va_arg(arg, int);
-	write(1, &c, 1);
+	write(STDOUT_FILENO, &c, 1);
 	i++;
 	return (i);
 }
