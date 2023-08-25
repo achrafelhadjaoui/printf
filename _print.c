@@ -21,16 +21,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			write(1, &format[i], 1);
+			write(STDOUT_FILENO, &format[i], 1);
 			i++;
-			/*result++;*/
 		}
 		else
 		{
 			i++;
 			if (format[i] == '%')
 			{
-				write(1, "%", 1);
+				write(STDOUT_FILENO, "%", 1);
 			}
 			c = format[i];
 			selected_function = u_select(&c);
