@@ -61,6 +61,7 @@ int to_bnr(unsigned int nb)
 	char num;
 
 	i = 0;
+	count = 0;
 	if (nb == 0)
 	{
 		write(STDOUT_FILENO, "0", 1);
