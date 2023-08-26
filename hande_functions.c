@@ -56,3 +56,20 @@ int _decimal(va_list arg)
 	count = to_char(nb, &count);
 	return (count);
 }
+
+/**
+ * _bnr - a function that converts unsigned int to binary
+ * @arg: parameter
+ *
+ * Return: an int
+ */
+
+int _bnr(va_list arg)
+{
+	unsigned int nb;
+	int count;
+
+	nb = va_arg(arg, unsigned int);
+	count = to_bnr(nb);
+	return (count);
+}

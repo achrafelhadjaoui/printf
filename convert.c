@@ -45,3 +45,42 @@ int to_char(int nb, int *count)
 	*count += _putchar(c);
 	return (*count);
 }
+
+
+/**
+ * to_bnr - a function
+ * @nb: pram
+ *
+ * Return: int
+ */
+
+int to_bnr(unsigned int nb)
+{
+	int arr[32];
+	int i, count, j;
+	char num;
+
+	i = 0;
+	if (nb == 0)
+	{
+		write(STDOUT_FILENO, "0", 1);
+		return (1);
+	}
+
+
+	while (nb > 0)
+	{
+		arr[i++] = nb % 2;
+		nb /= 2;
+	}
+
+	j = i - 1;
+	while (j >= 0)
+	{
+		num = '0' + arr[j];
+		write(STDOUT_FILENO, &num, 1);
+		count++;
+		j--;
+	}
+	return (count);
+}
