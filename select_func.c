@@ -17,6 +17,7 @@ int (*u_select(char *c))(va_list)
 		{"d", _decimal},
 		{"i", _decimal},
 		{"b", _bnr},
+		{"r", affiche_r},
 		{NULL, NULL}
 	};
 	i = 0;

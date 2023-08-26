@@ -73,3 +73,20 @@ int _bnr(va_list arg)
 	count = to_bnr(nb);
 	return (count);
 }
+
+/**
+ * affiche_r - a function
+ * @arg: parameter
+ *
+ * Return: int
+ */
+
+int affiche_r(va_list arg)
+{
+	int i;
+
+	i = 2;
+	(void)arg;
+	write(STDOUT_FILENO, "%r", 2);
+	return (i);
+}

@@ -30,6 +30,7 @@ int _decimal(va_list arg);
 int to_char(int nb, int *count);
 int to_bnr(unsigned int nb);
 int _bnr(va_list arg);
+int affiche_r(va_list arg);
 int (*u_select(char *c))(va_list);
 
 #endif
